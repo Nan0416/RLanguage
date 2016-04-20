@@ -1,0 +1,55 @@
+allocate=function(n1,n2,n3,n)
+{
+  a1=length(n1);
+  a2=length(n2);
+  a3=length(n3);
+  a1_1=1:a1;
+  a2_1=1:a2;
+  a3_1=1:a3;
+  i=1;
+  i1=i2=i3=1;
+  while(i<=a1+a2+a3-2)
+  {
+    if(find_1(n1,n[i]))
+    {
+      a1_1[i1]=(i-1)%/%4+1;
+      i1=i1+1;
+    }
+    if(find_1(n2,n[i]))
+    {
+      a2_1[i2]=(i-1)%/%4+1;
+      i2=i2+1;
+    }
+    if(find_1(n3,n[i]))
+    {
+      a3_1[i3]=(i-1)%/%4+1;
+      i3=i3+1;
+    }
+    i=i+1;
+  }
+  i=a1+a2+a3-1;
+  while(i<=a1+a2+a3)
+  {
+    if(find_1(n1,n[i]))
+    {
+      a1_1[i1]=i;
+      i1=i1+1;
+    }
+    if(find_1(n2,n[i]))
+    {
+      a2_1[i2]=i;
+      i2=i2+1;
+    }
+    if(find_1(n3,n[i]))
+    {
+      a3_1[i3]=i;
+      i3=i3+1;
+    }
+    i=i+1;
+  }
+
+  print(a1_1);
+  print(a2_1);
+  print(a3_1);
+}
+

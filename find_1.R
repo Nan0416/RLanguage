@@ -1,0 +1,20 @@
+find_1=function(n,a)
+{
+  p=length(n);
+  i=1;
+  while(i<=p)
+  {
+    if(a==n[i])
+    {
+      t=TRUE;
+      break;
+    }
+    i=i+1;
+  }
+  if(i==p+1)
+  {
+    t=FALSE;
+  }
+  t;
+}
+
